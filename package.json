@@ -1,0 +1,17 @@
+{
+  "name": "currencyAPIDocs",
+  "version": "1.0.0",
+  "description": "The official documentation of currencyAPI.io",
+  "main": "index.js",
+  "repository": "https://github.com/currency-api/documentation",
+  "author": "Adib Istanbouli <adib.istanbouli@gmail.com>",
+  "license": "MIT",
+  "private": null,
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.8"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
