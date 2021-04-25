@@ -74,7 +74,7 @@ GET https://api.currencyapi.io/markets
 ]
 ```
 
-### Response JOSN Structure
+### Response JSON Structure
 
 | Key | Description                                                                                                   |
 | --- | ------------------------------------------------------------------------------------------------------------- |
