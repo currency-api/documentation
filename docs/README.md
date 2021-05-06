@@ -45,6 +45,16 @@ https://api.currencyapi.io/markets
     ?token=ACCESS_TOKEN
 ```
 
+### Available symbols (Pairs)
+
+To get the complete list of a specific market (e.g., Forex, Crypto, etc.) available symbols/pairs, use the following endpoint. Replace the `MARKET_NAME` with the targeted market (crypto or forex)
+
+```js:no-line-numbers
+https://api.currencyapi.io/markets
+    ?token=ACCESS_TOKEN
+    &market=MARKET_NAME
+```
+
 ### REST API Calls
 
 `/markets` endpoint provides you the ability to query a base currency (e.g., EUR) or currency pair (e.g.,EURUSD).
@@ -74,7 +84,7 @@ GET https://api.currencyapi.io/markets
 ]
 ```
 
-### Response JOSN Structure
+### Response JSON Structure
 
 | Key | Description                                                                                                   |
 | --- | ------------------------------------------------------------------------------------------------------------- |
