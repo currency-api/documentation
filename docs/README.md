@@ -61,10 +61,21 @@ https://api.currencyapi.io/markets
 
 #### Query with base curency
 
+##### Search symbol/s
+
 ```js:no-line-numbers
 GET https://api.currencyapi.io/markets
     ?token=ACCESS_TOKEN
     &symbol=SYMBOL
+```
+
+##### Get exact symbol/s
+
+```js:no-line-numbers
+GET https://api.currencyapi.io/markets
+    ?token=ACCESS_TOKEN
+    &symbol=SYMBOL
+    &exact=true
 ```
 
 #### Response
