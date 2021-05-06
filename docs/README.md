@@ -69,16 +69,7 @@ GET https://api.currencyapi.io/markets
     &symbol=SYMBOL
 ```
 
-##### Get exact symbol/s
-
-```js:no-line-numbers
-GET https://api.currencyapi.io/markets
-    ?token=ACCESS_TOKEN
-    &symbol=SYMBOL
-    &exact=true
-```
-
-#### Response
+**Response**
 
 ```json:no-line-numbers
 [
@@ -93,6 +84,30 @@ GET https://api.currencyapi.io/markets
   "p":5
  }
 ]
+```
+
+##### Get exact symbol/s
+
+```js:no-line-numbers
+GET https://api.currencyapi.io/markets
+    ?token=ACCESS_TOKEN
+    &symbol=SYMBOL
+    &exact=true
+```
+
+**Response**
+
+```json:no-line-numbers
+{
+  "t":"2021-04-15T03:53:00.593Z",
+  "tms":"1618458780086",
+  "s":"EURUSD",
+  "b":1.19864,
+  "bd":0,
+  "a":1.19867,
+  "ad":1,
+  "p":5
+}
 ```
 
 ### Response JSON Structure
