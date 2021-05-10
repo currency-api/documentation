@@ -55,18 +55,18 @@ https://api.currencyapi.io/markets
     &market=MARKET_NAME
 ```
 
-### REST API Calls
+### Tick data API
 
 `/markets` endpoint provides you the ability to query a base currency (e.g., EUR) or currency pair (e.g.,EURUSD).
 
-#### Query with base curency
+#### Query with base curency or pair
 
 ##### Search symbol/s
 
 ```js:no-line-numbers
 GET https://api.currencyapi.io/markets
     ?token=ACCESS_TOKEN
-    &symbol=SYMBOL
+    &search=SYMBOL
 ```
 
 **Response**
@@ -92,7 +92,6 @@ GET https://api.currencyapi.io/markets
 GET https://api.currencyapi.io/markets
     ?token=ACCESS_TOKEN
     &symbol=SYMBOL
-    &exact=true
 ```
 
 **Response**
@@ -110,7 +109,7 @@ GET https://api.currencyapi.io/markets
 }
 ```
 
-### Response JSON Structure
+##### Symbol Response JSON Structure
 
 | Key | Description                                                                                                   |
 | --- | ------------------------------------------------------------------------------------------------------------- |
@@ -122,6 +121,44 @@ GET https://api.currencyapi.io/markets
 | a   | The ask price. It is also referring to the lowest price a seller will accept for a currency.                  |
 | ad  | The ask price direction. It is also referring to the color code of the displayed ask price (e.g., red/green). |
 | p   | The Currency precision                                                                                        |
+
+### Historical data API
+
+You can get the historical data of any of the available symbols by adding the `historical` parameter.
+
+**Response**
+
+```json:no-line-numbers
+[
+  [
+    1620604800,
+    58336.16,
+    59603,
+    57399.33,
+    57960
+  ],
+  ...
+]
+```
+
+```js:no-line-numbers
+GET https://api.currencyapi.io/markets
+    ?token=ACCESS_TOKEN
+    &symbol=SYMBOL
+    &historical=true
+    &offset=OFFSET // Optional (candles offset)
+    &scale=SCALE // Optional (e.g., 1, 60, 1D, 1W, 1M, 1Y), default to 1D
+```
+
+##### Historical Data Response JSON Structure
+
+| index | Description |
+| ----- | ----------- |
+| 0     | Timestamp.  |
+| 1     | Open.       |
+| 2     | High.       |
+| 3     | Low.        |
+| 4     | Close.      |
 
 ## Code Examples
 
