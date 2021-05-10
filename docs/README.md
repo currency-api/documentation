@@ -147,7 +147,7 @@ GET https://api.currencyapi.io/markets
     &symbol=SYMBOL
     &historical=true
     &offset=OFFSET // Optional (candles offset)
-    &scale=SCALE // Optional (e.g., 1, 60, 1D, 1W, 1M, 1Y), default to 1D
+    &scale=SCALE // Optional (e.g., 1, 60, 1D, 1W, 1M), default to 1D
 ```
 
 ##### Historical Data Response JSON Structure
